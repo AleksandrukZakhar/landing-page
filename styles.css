@@ -18,6 +18,18 @@ h1, p {
    -o-animation-iteration-count: 1;
 }
 
+@keyframes translate {
+    0% {
+        transform: translateY(-40px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 100;
+    }
+}
+
 section {
     height: 100vh;
     margin: 0;
