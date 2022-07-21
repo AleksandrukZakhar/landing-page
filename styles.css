@@ -165,13 +165,15 @@ header a:hover {
 }
 
 footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: hsl(0, 0%, 0%);
     height: 5vh;
 }
 
 footer > p {
     color:hsl(0, 0%, 100%);
-    text-align: center;
     animation: unset;
-    padding-top: 10px;
+    font-weight: 600;
 }
