@@ -9,27 +9,19 @@
 }
 
 h1, p {
-   animation: title 2s;
+   animation: translate 2s;
+   -webkit-animation: translate 2s;
+   -moz-animation: translate 2s;
    animation-iteration-count: 1;
+   -webkit-animation-iteration-count: 1;
+   -moz-animation-iteration-count: 1;
+   -o-animation-iteration-count: 1;
 }
 
 section {
     height: 100vh;
     margin: 0;
     padding: 0;
-}
-
-
-@keyframes title {
-    0% {
-        transform: translateY(-40px);
-        opacity: 0;
-    }
-
-    100% {
-        transform: translateY(0px);
-        opacity: 100;
-    }
 }
 
 header {
@@ -158,4 +150,16 @@ header a:hover {
     position: absolute;
     z-index: -1;
     opacity: 50%;
+}
+
+footer {
+    background-color: hsl(0, 0%, 0%);
+    height: 5vh;
+}
+
+footer > p {
+    color:hsl(0, 0%, 100%);
+    text-align: center;
+    animation: unset;
+    padding-top: 10px;
 }
