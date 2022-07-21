@@ -8,6 +8,29 @@
     color: hsl(0, 0%, 0%);
 }
 
+h1, p {
+   animation: title 2s;
+   animation-iteration-count: 1;
+}
+
+section {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+
+@keyframes title {
+    0% {
+        transform: translateY(-40px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 100;
+    }
+}
 
 header {
   display: flex;
@@ -20,7 +43,8 @@ header {
 
 .logo {
     margin-right: auto;
-    color: hsl(0, 0%, 100%)
+    color: hsl(0, 0%, 100%);
+    animation: unset;
 }
 
 header a {
@@ -84,13 +108,14 @@ header a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    background-color: hsl(0, 0%, 0%);
 }
 
 .image-wrapper, .text-wrapper {
     display: flex;
     justify-content: center;
     gap: 1rem;
-    padding-top: 2rem;
     flex-wrap: wrap;
 }
 
@@ -107,10 +132,30 @@ header a:hover {
 .text-wrapper {
     padding-top: 10px;
     justify-content: space-around;
-    width: 85vh;
+    width: 45vw;
 }
 
 .text-wrapper p {
     font-size: 1rem;
     font-weight: 800;
+    color: hsl(0, 0%, 100%);
+}
+
+
+.quote-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.quote-section > h1 > p {
+    font-weight: 400;
+}
+
+.quote-section > img {
+    max-width: 600px;
+    position: absolute;
+    z-index: -1;
+    opacity: 50%;
 }
