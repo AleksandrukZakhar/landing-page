@@ -76,6 +76,41 @@ header a:hover {
 }
 
 .sign-up-btn:hover {
-    transform: scale(1.1);
+    transform: scale(1.3);
     transition: .3s ease-in-out;
+}
+
+.content-wrapper-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image-wrapper, .text-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.image-wrapper img {
+    max-width: 200px;
+    object-fit: cover;
+}
+
+.image-wrapper img:hover {
+    transform: scale(1.2);
+    transition: .3s ease-in-out;
+}
+
+.text-wrapper {
+    padding-top: 10px;
+    justify-content: space-around;
+    width: 85vh;
+}
+
+.text-wrapper p {
+    font-size: 1rem;
+    font-weight: 800;
 }
