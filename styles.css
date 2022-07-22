@@ -99,7 +99,7 @@ header a:hover {
     background-color: hsl(0, 0%, 0%);
     color: white;
     border-color:hsl(0, 0%, 0%);
-    width: 10vw;
+    width: 15vw;
     border-radius: 10px;
 }
 
@@ -108,38 +108,24 @@ header a:hover {
     transition: .3s ease-in-out;
 }
 
-.content-wrapper-2 {
+.sneakers-section {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     background-color: hsl(0, 0%, 0%);
 }
 
-.image-wrapper, .text-wrapper {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    flex-wrap: wrap;
-}
-
-.image-wrapper img {
+.sneakers-section > div > img {
     max-width: 200px;
     object-fit: cover;
 }
 
-.image-wrapper img:hover {
+.sneakers-section > div > img:hover {
     transform: scale(1.2);
     transition: .3s ease-in-out;
 }
 
-.text-wrapper {
-    padding-top: 10px;
-    justify-content: space-around;
-    width: 45vw;
-}
-
-.text-wrapper p {
+.sneakers-section > div > p {
     font-size: 1rem;
     font-weight: 800;
     color: hsl(0, 0%, 100%);
@@ -176,4 +162,73 @@ footer > p {
     color:hsl(0, 0%, 100%);
     animation: unset;
     font-weight: 600;
+}
+
+
+.burger {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 18px;
+    position: relative;
+}
+
+.burger > div {
+    width: 20px;
+    padding: 2px;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 5px;
+}
+
+.burger > select {
+    position: absolute;
+    opacity: 0;
+}
+
+@media screen and (max-width: 800px) {
+    header a {
+        display: none;
+    }
+
+    .burger {
+        display: flex;
+    }
+
+    .main-section {
+        flex-direction: column;
+    } 
+
+    .main-image {
+        max-width: 300px;
+    }
+
+    .content-wrapper {
+        width: 60vw;
+    }
+
+    .sneakers-section {
+        flex-direction: column;
+        height: 200vh;
+    }
+
+    .quote-section > img {
+        max-width: 450px;
+    }
+    
+}
+
+
+@media screen and (max-width: 400px) {
+    .content-wrapper {
+        width: 80vw;
+    }
+
+    .quote-section > img {
+        max-width: 300px;
+    }
+
+    .quote-section > h1 {
+        font-size: 16px;
+    }
 }
