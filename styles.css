@@ -36,7 +36,7 @@ section {
     padding: 0;
 }
 
-header {
+.header {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -51,15 +51,37 @@ header {
     animation: unset;
 }
 
-header a {
+.header-link {
     text-decoration: none;
     color: hsl(0, 0%, 100%);
 }
 
-header a:hover {
+.header-link:hover {
     transform: translateY(5px);
     transition: .3s ease-in-out;
 }
+
+.burger {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 18px;
+    position: relative;
+}
+
+.burger-section {
+    width: 20px;
+    padding: 2px;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 5px;
+}
+
+.burger-dropdown {
+    position: absolute;
+    opacity: 0;
+}
+
 
 .main-section {
     display: flex;
@@ -98,7 +120,7 @@ header a:hover {
 .sign-up-btn {
     background-color: hsl(0, 0%, 0%);
     color: white;
-    border-color:hsl(0, 0%, 0%);
+    border: unset;
     width: 15vw;
     border-radius: 10px;
 }
@@ -115,17 +137,17 @@ header a:hover {
     background-color: hsl(0, 0%, 0%);
 }
 
-.sneakers-section > div > img {
+.sneakers-image {
     max-width: 200px;
     object-fit: cover;
 }
 
-.sneakers-section > div > img:hover {
+.sneakers-image:hover {
     transform: scale(1.2);
     transition: .3s ease-in-out;
 }
 
-.sneakers-section > div > p {
+.sneakers-text {
     font-size: 1rem;
     font-weight: 800;
     color: hsl(0, 0%, 100%);
@@ -139,18 +161,18 @@ header a:hover {
     text-align: center;
 }
 
-.quote-section > h1 > p {
+.quote-author {
     font-weight: 400;
 }
 
-.quote-section > img {
+.quote-image {
     max-width: 600px;
     position: absolute;
     z-index: -1;
     opacity: 50%;
 }
 
-footer {
+.footer {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -158,36 +180,15 @@ footer {
     height: 5vh;
 }
 
-footer > p {
+.site-author {
     color:hsl(0, 0%, 100%);
     animation: unset;
     font-weight: 600;
 }
 
 
-.burger {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    height: 18px;
-    position: relative;
-}
-
-.burger > div {
-    width: 20px;
-    padding: 2px;
-    background-color: hsl(0, 0%, 100%);
-    border-radius: 5px;
-}
-
-.burger > select {
-    position: absolute;
-    opacity: 0;
-}
-
 @media screen and (max-width: 800px) {
-    header a {
+    .header-link {
         display: none;
     }
 
@@ -212,7 +213,7 @@ footer > p {
         height: 200vh;
     }
 
-    .quote-section > img {
+    .quote-image {
         max-width: 450px;
     }
     
@@ -224,11 +225,11 @@ footer > p {
         width: 80vw;
     }
 
-    .quote-section > img {
+    .quote-image {
         max-width: 300px;
     }
 
-    .quote-section > h1 {
+    .quote {
         font-size: 16px;
     }
 }
